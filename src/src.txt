@@ -1,0 +1,45 @@
+src.txt 1.22                          UTF-8                   dh:2014-12-04
+
+                 <https://github.com/orcmid/ShowDefs>/src/src.txt
+
+                        SHOWDEFS COMMON SOURCE CODE
+                        ===========================
+
+    This is the common source for ShowDefs.  These files are used across
+    multiple compile and test cases.
+
+MANIFEST
+
+    src.txt
+        This description file on the construction and organization of
+        the material.
+
+    VCshowDefs.c
+        The sample program and list of defines to check in Visual C/C++
+        compilations.
+
+TODO
+
+ * VCshowDefs.c: Put the location of the code in the code.  Explain that
+   it is oriented to VC++ compilation.
+
+ * Switch to an include-file structure that allows for more-systematic
+   reuse in code other than simple command-line reporters.
+
+ * VCshowDefs.c: Boil the parts down to what matters for a particular
+   compiler and configuration case.
+
+ * Explain where the defines are defined, especially for the ones tied to the
+   language standards.
+
+ * Pull out multi-platform, -configuration ones into separate little
+   #include files.
+
+ * Confirm how to get include files working when the source is included as
+   existing files in a project or compile in a different directory [;<).
+
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+1.22 2014-12-04-13:44 Provide initial GitHub orcmid/ShowDefs src/ structure.
+
+                           *** end of src.txt ***
