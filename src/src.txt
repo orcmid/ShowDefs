@@ -38,6 +38,9 @@ TODO
  * Confirm how to get include files working when the source is included as
    existing files in a project or compile in a different directory [;<).
 
+ * Find the example that was my original inspiration for this use of the
+   pre-processor back in 2005, if not before.
+
  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 1.22 2014-12-04-13:44 Provide initial GitHub orcmid/ShowDefs src/ structure.
