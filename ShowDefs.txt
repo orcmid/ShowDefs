@@ -1,0 +1,49 @@
+ShowDefs.txt 1.22                     UTF-8                   dh:2014-12-04
+
+                     <https://github.com/orcmid/ShowDefs>
+#
+#              SHOWDEFS C/C++ PRE-PROCESSOR DEFINITIONS AND SETTINGS
+#              =====================================================
+
+    This is the GitHub project for orcmid/ShowDefs.  The project provides
+    demonstration of a method for reporting the pre-processor definitions
+    that apply in a given C/C++ compilation.  The information is useful
+    in providing portable source-code build setups.  Demonstrations are
+    provided for the building of portable projects using Microsoft
+    Windows development tools, including Visual Studio and VC++ command-
+    line tools.
+
+
+
+TODO
+
+ * Add manifest.  Don't duplicate what is in the README.  But use this to
+   have versioning on the package and have some history that works when the
+   code is downloaded in a package and not as a Git repository.
+
+ * Put ALv2 notice here and elsewhere.  It would be great to use a simpler
+   version than the full length include offered in the Appendix of ALv2.
+
+ * Add src/ here and put src.txt there, with many TODOs for that case.
+
+ * Add VS2013/ here and VS2013.txt there.
+
+ * Add VC++/ and VC++.txt for the command-line adaptation, using batch files
+   to allow the VC++ tools to be used from within POSIX shells.  This should
+   all run and build from under the MSYS2 shell.
+
+ * Add WinGCC for the command-line adaptation using the version of GCC that
+   installs with MSYS2 Dev Tools as a way to compile for Native Windows using
+   GCC command-line building.
+
+ * Do something better with the README.md beyond the default that was created
+   when the repository was initialized by GitHub.
+
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+1.22 2009-02-19-10:41 Create placeholder to "prime the pump" as kicking off
+     GitHub orcmid/ShowDefs.  This is 1.22 in order to synchronize with the
+     older history of the file that was started in 2005.
+
+                       *** end of ShowDefs.txt ***
