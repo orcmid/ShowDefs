@@ -1,4 +1,4 @@
-/* VCshowDefs.c 1.20                  UTF-8                       2014-12-03
+/* VCshowDefs.c 1.21                  UTF-8                       2014-12-03
  *
  *             SHOW PRESENCE OF VISUAL C++ PREPROCESSOR DEFINES
  *
