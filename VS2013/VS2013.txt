@@ -1,0 +1,57 @@
+VS2013.txt 1.22                       UTF-8                    dh:2014-12-04
+
+              <https://github.com/orcmid/ShowDefs>/VS2013/VS2013.txt
+
+                   SHOWDEFS IN VISUAL STUDIO 2013 COMPILES
+                   =======================================
+
+    This folder provides demonstrations of the connection between Visual
+    Studio 2013 options and the pre-processor definitions that are made
+    available in the compilation of C/C++ code.
+
+    ShowDefs provides, by example, a clean way to include optional Visual
+    Studio projects as part of a repository for a multi-platform project.
+    In this approach, use of Visual Studio Solutions and Projects is
+    optional and does not interfere with the other ways of producing
+    builds of desktop versions to be operated on Microsoft Windows.
+
+VS2013 VERSIONS
+    Free versions of Microsoft Visual Studio 2013 are all that are required
+    to employ the VS2013 Projects included in ShowDefs.  The VS Projects were
+    all produced using Visual Studio Express 2013 for Desktop.  They have been
+    tested using Visual Studio Community 2013 as well.
+
+
+MANIFEST
+
+    VS2013.txt
+        This description file on the construction and organization of
+        the material.
+
+    Default/
+        VS2013 Project demonstrating the default behavior when given a
+        simple *.c file as the source code.
+
+
+TODO
+
+ * Create manifest and instructions for Default/
+
+ * Add StdC/ for producing an explicitly standard compile
+
+ * Add Stdx64/ for producing a standard x64 compilation
+
+ * Add StdCpp/ for producing a standard C++ x64 compilation
+
+ * Add information about the free VS2013 editions used and obtaining them.
+
+ * Update information about obtaining and installing VS2013
+
+ * Provide information about up-level, down-level and data that applies to
+   the use of all of the VS2013 Projects here.
+
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+1.22 2014-12-04-15:52 Provide initial GitHub orcmid/ShowDefs src/ structure.
+
+                           *** end of VS2013.txt ***
