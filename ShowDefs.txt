@@ -1,30 +1,39 @@
-ShowDefs.txt 1.22                     UTF-8                   dh:2014-12-04
+ShowDefs.txt 1.23                     UTF-8                   dh:2014-12-04
 
-                     <https://github.com/orcmid/ShowDefs>
-#
-#              SHOWDEFS C/C++ PRE-PROCESSOR DEFINITIONS AND SETTINGS
-#              =====================================================
+               <https://github.com/orcmid/ShowDefs>/ShowDefs.txt
+
+             SHOWDEFS C/C++ PRE-PROCESSOR DEFINITIONS AND SETTINGS
+             =====================================================
 
     This is the GitHub project for orcmid/ShowDefs.  The project provides
     demonstration of a method for reporting the pre-processor definitions
     that apply in a given C/C++ compilation.  The information is useful
     in providing portable source-code build setups.  Demonstrations are
     provided for the building of portable projects using Microsoft
-    Windows development tools, including Visual Studio and VC++ command-
-    line tools.
+    Windows development tools, including Visual Studio projects and VC++
+    command-line projects.
 
+MANIFEST
 
+    ShowDefx.txt
+        This text manifest and work-item file for the top level of the
+        repository.
+
+    src/
+        folder of common source used across the various configurations
+
+    LICENSE
+        The Apache License, Version 2.0, plaintext form
+
+    README.md
+        The GitHub MarkDown text form use as the presented page
+        of the project at <https://githug.com/orcmid/ShowDefs>
 
 TODO
 
- * Add manifest.  Don't duplicate what is in the README.  But use this to
-   have versioning on the package and have some history that works when the
-   code is downloaded in a package and not as a Git repository.
-
- * Put ALv2 notice here and elsewhere.  It would be great to use a simpler
-   version than the full length include offered in the Appendix of ALv2.
-
- * Add src/ here and put src.txt there, with many TODOs for that case.
+ * Put ALv2 notices on the bits (here too).  It would be great to use a
+   simpler version than the full length include offered in the Appendix of
+   the ALv2 text.
 
  * Add VS2013/ here and VS2013.txt there.
 
@@ -34,15 +43,21 @@ TODO
 
  * Add WinGCC for the command-line adaptation using the version of GCC that
    installs with MSYS2 Dev Tools as a way to compile for Native Windows using
-   GCC command-line building.
+   GCC command-line usage.
 
  * Do something better with the README.md beyond the default that was created
    when the repository was initialized by GitHub.
 
+ * Include NOTICE if and when needed.
+
  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-
-1.22 2009-02-19-10:41 Create placeholder to "prime the pump" as kicking off
+1.23 2014-12-04-13:34 Provide Initial Manifest
+     Don't duplicate what is in the README.  But use this to have versioning
+     on the package and have some history that works when the code is down-
+     loaded in a package and not as a Git repository.  The LICENSE and
+     README.md are added.  Add src/ here and start with src.txt there too.
+1.22 2014-12-04-10:41 Create placeholder to "prime the pump" as kicking off
      GitHub orcmid/ShowDefs.  This is 1.22 in order to synchronize with the
      older history of the file that was started in 2005.
 
