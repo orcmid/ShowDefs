@@ -50,6 +50,10 @@ TODO
 
  * Include NOTICE if and when needed.
 
+ * Add VS2015/ using the initial Technology Preview and track until the
+   release version.  This will provide some Windows 10 Technical Preview
+   tracking as well.
+
  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 1.23 2014-12-04-13:34 Provide Initial Manifest
