@@ -1,0 +1,75 @@
+Default.txt 1.22                       UTF-8                    dh:2014-12-04
+
+       <https://github.com/orcmid/ShowDefs>/VS2013/Default/Default.txt
+
+                DEFAULT SHOWDEFS IN VISUAL STUDIO 2013 COMPILES
+                ===============================================
+
+    This folder provides a Visual Studio 2013 Project for building the
+    VCShowsDef.c program.  The default settings are used for making a
+    Release compilation.  No other VS 2013 settings or options are
+    exercises.
+
+    The result can be demonstrated by running the
+
+VS2013 VERSIONS
+    Free versions of Microsoft Visual Studio 2013 are all that are required
+    to employ the VS2013 Projects included in ShowDefs.  The VS Projects were
+    all produced using Visual Studio Express 2013 for Desktop.  They have been
+    tested using Visual Studio Community 2013 as well.
+
+
+MANIFEST
+
+    Default.txt
+        This manifest, summary, and job jar.
+
+    DefaultProject.bat
+        Windows batch command script that is useful for executing the
+        compiled result produced by the Default Project.
+
+    DefaultProject.txt
+        Manifest, summary and and job jar for DefaultProject.zip, describing
+        how to extract and use the Visual Studio Solution and Project for the
+        Default demonstration.
+
+    DefaultProject.zip
+        Zip Archive containing the Visual Studio Solution and Project that
+        can be extracted in place for compiling a demonstration Default.exe
+        showing default pre-processor labels that are defined (or not) in
+        the compilation
+
+    *.* Other files
+        When the content of DefaultProject.zip is extracted in place, there
+        will be additional files that are used by Visual Studio and others
+        that are produced by the compilation process.  Those files are not
+        under source control and need not be preserved here.
+
+TODO
+
+ * Confirm that DefaultProject.txt being the same in DefaultProject.zip
+   will not produce an "uncommitted change" when extracted from the
+   DefaultProject.zip archive.
+
+ * Add DefaultProject.bat for verifying that a build has occured and then
+   execute the resulting Default.exe program.
+
+ * Verify that the Default.exe runs on Windows versions from Windows XP to
+   Windows 10 Technical Preview.
+
+ * Verify that the VS Solution and Project work when the repository is cloned
+   to a different computer location than the clone in which it was created.
+
+ * Determine what down-level Visual Studio releases do with the VS 2013
+   Solution and Project here.
+
+ * Determine what different and up-level Visual Studio releases do with the
+   VS 2013 Solution and Project here, created by VS Express 2013 for Windows.
+
+ * Make clear that the project uses VCShowDefs.c from the src/ folder.
+
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+1.22 2014-12-04-18:02 Initial draft for the Default VS Project case.
+
+                           *** end of Default.txt ***
