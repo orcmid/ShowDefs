@@ -1,4 +1,4 @@
-ShowDefs.txt 1.23                     UTF-8                   dh:2014-12-04
+ShowDefs.txt 1.24                     UTF-8                   dh:2014-12-05
 
                <https://github.com/orcmid/ShowDefs>/ShowDefs.txt
 
@@ -13,14 +13,21 @@ ShowDefs.txt 1.23                     UTF-8                   dh:2014-12-04
     Windows development tools, including Visual Studio projects and VC++
     command-line projects.
 
+    Every subfolder in this project has a *.txt file with the same name
+    as the subfolder, where additional structure, practices, and work
+    items are accounted for.
+
 MANIFEST
 
-    ShowDefx.txt
+    ShowDefs.txt
         This text manifest and work-item file for the top level of the
         repository.
 
-    src/
-        folder of common source used across the various configurations
+    .gitignore
+        Rules for files that are excluded from the repository.  This is
+        used to excluded the ephemeral materials of projects and builds,
+        including final executables and libraries that are not released
+        artifacts.
 
     LICENSE
         The Apache License, Version 2.0, plaintext form
@@ -29,13 +36,29 @@ MANIFEST
         The GitHub MarkDown text form use as the presented page
         of the project at <https://githug.com/orcmid/ShowDefs>
 
+    src/
+        folder of common source used across the various configurations
+
+    VS2103/
+        folder of compilations using Visual Studio 2103 for their creation.
+
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+                       Copyright 2014 Dennis E. Hamilton
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
 TODO
-
- * Put ALv2 notices on the bits (here too).  It would be great to use a
-   simpler version than the full length include offered in the Appendix of
-   the ALv2 text.
-
- * Add VS2013/ here and VS2013.txt there.
 
  * Add VC++/ and VC++.txt for the command-line adaptation, using batch files
    to allow the VC++ tools to be used from within POSIX shells.  This should
@@ -56,6 +79,10 @@ TODO
 
  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+1.24 2014-12-05-21:31 Expand Project Content
+     .gitignore is accounted for along with the VS2013/ folder for exploring
+     pre-processor variables that are set when including various VS2013 C/C++
+     projects.  Add license claim.
 1.23 2014-12-04-13:34 Provide Initial Manifest
      Don't duplicate what is in the README.  But use this to have versioning
      on the package and have some history that works when the code is down-
