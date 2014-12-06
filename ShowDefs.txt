@@ -1,33 +1,34 @@
-ShowDefs.txt 1.24                     UTF-8                   dh:2014-12-05
+ShowDefs.txt 1.25                     UTF-8                   dh:2014-12-06
 
                <https://github.com/orcmid/ShowDefs>/ShowDefs.txt
 
              SHOWDEFS C/C++ PRE-PROCESSOR DEFINITIONS AND SETTINGS
              =====================================================
 
-    This is the GitHub project for orcmid/ShowDefs.  The project provides
-    demonstration of a method for reporting the pre-processor definitions
-    that apply in a given C/C++ compilation.  The information is useful
-    in providing portable source-code build setups.  Demonstrations are
-    provided for the building of portable projects using Microsoft
-    Windows development tools, including Visual Studio projects and VC++
-    command-line projects.
+    These are the GitHub sources for orcmid/ShowDefs.  The project demon-
+    strates a method for reporting pre-processor definitions employed for
+    given C/C++ compilation settings.  The information is useful in
+    establishing repeatable source-code build setups.  Illustration is
+    with techniques for building Windows versions of cross-platform
+    software using Microsoft development tools, including Visual Studio
+    Projects and VC++ command-line compilations.  Alternative tool chains
+    are usable along-side the provisions for use of Microsoft development
+    tools.
 
-    Every subfolder in this project has a *.txt file with the same name
-    as the subfolder, where additional structure, practices, and work
-    items are accounted for.
 
 MANIFEST
 
     ShowDefs.txt
-        This text manifest and work-item file for the top level of the
-        repository.
+        This summary, manifest and work-item file for the top level of the
+        orcmid/ShowDefs code tree.
 
     .gitignore
         Rules for files that are excluded from the repository.  This is
-        used to excluded the ephemeral materials of projects and builds,
-        including final executables and libraries that are not released
-        artifacts.
+        used to exclude ephemeral materials of projects and builds,
+        including final executables and libraries that are not delivered
+        in the code tree.  VS Solution and Project files are also excluded
+        because working copies may change in ways that should not pollute
+        the archived forms.  See the VS2013/ folder for how this is avoided.
 
     LICENSE
         The Apache License, Version 2.0, plaintext form
@@ -40,7 +41,9 @@ MANIFEST
         folder of common source used across the various configurations
 
     VS2103/
-        folder of compilations using Visual Studio 2103 for their creation.
+        folder for builds using pre-defined Visual Studio 2103 Solution
+        and Project files for those
+
 
  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -62,7 +65,8 @@ TODO
 
  * Add VC++/ and VC++.txt for the command-line adaptation, using batch files
    to allow the VC++ tools to be used from within POSIX shells.  This should
-   all run and build from under the MSYS2 shell.
+   all run and build from under the MSYS2 shell as well as cmd.exe, Power-
+   shell, TakeComand, etc.
 
  * Add WinGCC for the command-line adaptation using the version of GCC that
    installs with MSYS2 Dev Tools as a way to compile for Native Windows using
@@ -79,6 +83,10 @@ TODO
 
  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+1.25 2014-12-06-08:37 Improve Summary
+     The summary is refined with the motivation for how Microsoft tooling is
+     supported alongside or part of the use of other tool chains, along with
+     other touch-ups.
 1.24 2014-12-05-21:31 Expand Project Content
      .gitignore is accounted for along with the VS2013/ folder for exploring
      pre-processor variables that are set when including various VS2013 C/C++
