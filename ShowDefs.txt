@@ -1,4 +1,4 @@
-ShowDefs.txt 1.25                     UTF-8                   dh:2014-12-06
+ShowDefs.txt 1.26                     UTF-8                     dh:2014-12-07
 
                <https://github.com/orcmid/ShowDefs>/ShowDefs.txt
 
@@ -81,8 +81,19 @@ TODO
    release version.  This will provide some Windows 10 Technical Preview
    tracking as well.
 
+ * Percolate the ALv2 Notice down through the folders and into scripts.
+   (Can't close this until it is at least percolated down into all
+   subordinate folders.)
+
+ * Rename src/ to common/ because there could well be shim code at one of
+   the configuration-dependent subprojects.  Or maybe by the source code?
+   That would maybe make common/c, common/cs, common/java, that sort of thing?
+   I have to be careful about the path names that will then be involved.
+
  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+1.26 2014-12-07-14:07 New Work Items
+     Pondering the naming of src/
 1.25 2014-12-06-08:37 Improve Summary
      The summary is refined with the motivation for how Microsoft tooling is
      supported alongside or part of the use of other tool chains, along with
