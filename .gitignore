@@ -1,4 +1,4 @@
-# .gitignore 0.02                     UTF-8                    dh:2014-12-03
+# .gitignore 0.03                     UTF-8                    dh:2014-12-07
 #
 #                                ORCMID/SHOWDEFS
 #                                ===============
@@ -22,6 +22,7 @@
 
 # Do not include working solutions in the repository tree.  Shared
 # solutions are obtained from archives so working solutions are only local
+
 *.sln
 *.vcxproj
 *.vcxproj.filters
@@ -215,6 +216,11 @@ UpgradeLog*.htm
 FakesAssemblies/
 
 
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# 0.03 2014-12-07-17:59 Tidy Up
+#      I am providing local .gitignore for entire solution subdirectories,
+#      because of artifacts in addition to Visual Studio's that I might have
+#      in .zip archives for solution and project folders.
 # 0.02 2014-12-03-17:34 Eliminate Visual Studio Solution Files
 #      Solutions and Projects are eliminated because they they are not static.
 #      Starter solutions are incorporated in the repository within Zip
