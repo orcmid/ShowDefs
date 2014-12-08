@@ -1,4 +1,4 @@
-ShowDefs.txt 1.26                     UTF-8                     dh:2014-12-07
+ShowDefs.txt 1.27                     UTF-8                     dh:2014-12-08
 
                <https://github.com/orcmid/ShowDefs>/ShowDefs.txt
 
@@ -81,10 +81,6 @@ TODO
    release version.  This will provide some Windows 10 Technical Preview
    tracking as well.
 
- * Percolate the ALv2 Notice down through the folders and into scripts.
-   (Can't close this until it is at least percolated down into all
-   subordinate folders.)
-
  * Rename src/ to common/ because there could well be shim code at one of
    the configuration-dependent subprojects.  Or maybe by the source code?
    That would maybe make common/c, common/cs, common/java, that sort of thing?
@@ -92,6 +88,8 @@ TODO
 
  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+1.27 2014-12-08-09:00 Complete License Notices
+     The license notices have been placed on src/ and VS2013/ content
 1.26 2014-12-07-14:07 New Work Items
      Pondering the naming of src/
 1.25 2014-12-06-08:37 Improve Summary
