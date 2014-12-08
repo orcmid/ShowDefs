@@ -1,4 +1,4 @@
-VS2013.txt 1.22                       UTF-8                    dh:2014-12-04
+VS2013.txt 1.23                       UTF-8                    dh:2014-12-07
 
               <https://github.com/orcmid/ShowDefs>/VS2013/VS2013.txt
 
@@ -21,6 +21,27 @@ VS2013 VERSIONS
     all produced using Visual Studio Express 2013 for Desktop.  They have been
     tested using Visual Studio Community 2013 as well.
 
+    Information on Visual Studio Community 2013 is currently available at
+    <http://www.visualstudio.com/products/visual-studio-community-vs>.
+    Information on the Visual Studio Express 2013 editions is available at
+    <http://www.visualstudio.com/en-us/products/visual-studio-express-vs.aspx>.
+
+    Download information for all of the current free editions is available at
+    <http://www.visualstudio.com/en-us/downloads/download-visual-studio-vs#DownloadFamilies_2>
+    It is desirable to download .iso images if possible.  These are important
+    for future reinstallation, especially after the free Visual Studio 2013
+    downloads are supplanted by later editions.
+
+    Visual Studio Express 2013 for Windows Desktop is much more compact, while
+    Community 2013 is more comprehensive and suitable for complex projects and
+    using multiple programming languages, libraries, and tools.
+
+    Visual Studio Express 2013 for Windows cannot be used with these
+    solutions.  It does not support the native Desktop projects used here.
+
+    Windows 7 and later are required for operating these versions of Visual
+    Studio.
+
 
 MANIFEST
 
@@ -32,10 +53,23 @@ MANIFEST
         VS2013 Project demonstrating the default behavior when given a
         simple *.c file as the source code.
 
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+                       Copyright 2014 Dennis E. Hamilton
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
 
 TODO
-
- * Create manifest and instructions for Default/
 
  * Add StdC/ for producing an explicitly standard compile
 
@@ -43,15 +77,20 @@ TODO
 
  * Add StdCpp/ for producing a standard C++ x64 compilation
 
- * Add information about the free VS2013 editions used and obtaining them.
-
- * Update information about obtaining and installing VS2013
+ * Update information about obtaining and installing VS2013 in a stable place
+   that is not so ephemeral as the Microsoft pages and their changing as new
+   releases move to the forefront.
 
  * Provide information about up-level, down-level and data that applies to
    the use of all of the VS2013 Projects here.
 
  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-1.22 2014-12-04-15:52 Provide initial GitHub orcmid/ShowDefs src/ structure.
+1.23 2014-12-07-18:12 Introduce License and VS2013 download info
+     The ALv2 notice is added here along with links to Microsoft pages for the
+     free versions of VS2013.
+1.22 2014-12-04-15:52 VS2013 Structure
+     orcmid/ShowDefs VS2013/VS2013.txt added to explain this part of the
+     source tree.
 
                            *** end of VS2013.txt ***
