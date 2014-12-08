@@ -1,0 +1,19 @@
+# VS2013/Default/.gitignore 0.00      UTF-8                    dh:2014-12-07
+#
+#                                ORCMID/SHOWDEFS
+#                                ===============
+#
+#        .GITIGNORE FOR SHOWDEFS VS2013/Default/DefaultProject FOLDER
+#
+#   This .gitignore file keeps the project folder out of the source tree.
+#   The project folder is created when DefaultProject.zip is extracted into
+#   its default location.  It is the practice here that the VS2013 Project
+#   extraction is only local.
+
+/DefaultProject
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# 0.00 2014-12-07-18:08 Setup to ignore all build artifacts in the working
+#      copy of the source-tree.
+#
+#                  *** end of VS2013/Default/.gitignore ***
