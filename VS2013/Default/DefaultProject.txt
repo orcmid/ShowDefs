@@ -1,0 +1,66 @@
+DefaultProject.txt 0.00               UTF-8                    dh:2014-12-07
+
+                     <https://github.com/orcmid/ShowDefs>
+           /VS2013/Default/DefaultProject.zip/DefaultProject.txt
+
+          SHOW DEFAULT DEFINITIONS IN VISUAL STUDIO 2013 COMPILES
+          =======================================================
+
+    DefaultProject.zip contains a Visual Studio 2013 Project for building the
+    VCShowDefs.c program.  The VS2013 default settings are used for making a
+    Release build.  There are no other compilation setting beyond choosing to
+    build a release.  There are some convenience settings used by the author,
+    but they do not impact compilation.
+
+    The result can be demonstrated by extracting the project, building the
+    program, and executing the ShowDefs/VS2013/Default/DefaultRun.bat script.
+
+MANIFEST
+
+    DefaultProject.txt
+        This manifest, summary, and job jar.
+
+    Default.sln
+        Microsoft Visual Studio Solution for the default build case.
+        Double-click on this extracted file to open the solution using an
+        installed Visual Studio product.
+
+    Default.v12.suo
+        Visual Studio Solution User Options with the settings used when the
+        solution and project were saved.
+
+    Default.vcxproj
+        File with information for the Visual C/C++ compilation of the
+        specific code.
+
+    Default.vcproj.filters
+        File used as part of the project settings in Visual Studio operation
+
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+                       Copyright 2014 Dennis E. Hamilton
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+TODO
+
+ * Verify that the extraction will work when DefaultProject/ already exists.
+
+ * Complete description of prerequisites, extraction, and building the
+   project.
+
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ 0.00 2014-12-07-18:51 Initial draft for the Default VS Project case.
+
+                     *** end of DefaultProject.txt ***

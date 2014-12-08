@@ -1,4 +1,4 @@
-Default.txt 1.22                       UTF-8                    dh:2014-12-04
+Default.txt 1.23                       UTF-8                    dh:2014-12-07
 
        <https://github.com/orcmid/ShowDefs>/VS2013/Default/Default.txt
 
@@ -10,21 +10,26 @@ Default.txt 1.22                       UTF-8                    dh:2014-12-04
     Release compilation.  No other VS 2013 settings or options are
     exercises.
 
-    The result can be demonstrated by running the
+    The result can be demonstrated by extracting the project, building the
+    program, and executing the program using the DefaultProject.bat script.
 
-VS2013 VERSIONS
-    Free versions of Microsoft Visual Studio 2013 are all that are required
-    to employ the VS2013 Projects included in ShowDefs.  The VS Projects were
-    all produced using Visual Studio Express 2013 for Desktop.  They have been
-    tested using Visual Studio Community 2013 as well.
-
+    *** IMPORTANT ***
+        The VS2013 Project and DefaultProject.bat are designed to be operated
+        from working locations here.
+         * DefaultRun.bat depends on DefaultProject.zip being extracted
+           into subfolder DefaultProject/ of this folder.
+         * The Project depends on being able to locate src/VCshowDefs.c from
+           where it is extracted.
 
 MANIFEST
 
     Default.txt
         This manifest, summary, and job jar.
 
-    DefaultProject.bat
+    .gitignore
+        Exclusion of DefaultProject/ from the source tree
+
+    DefaultRun.bat
         Windows batch command script that is useful for executing the
         compiled result produced by the Default Project.
 
@@ -39,13 +44,32 @@ MANIFEST
         showing default pre-processor labels that are defined (or not) in
         the compilation
 
-    *.* Other files
-        When the content of DefaultProject.zip is extracted in place, there
-        will be additional files that are used by Visual Studio and others
-        that are produced by the compilation process.  Those files are not
-        under source control and need not be preserved here.
+    DefaultProject/
+        This is a working folder in which the project files are extracted and
+        used.  The working folder is not part of the Git Source Tree and its
+        contents will not be preserved in the source-code control system. If
+        the folder does not exist, it will be created when DefaultProject.zip
+        is extracted.
+
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+                       Copyright 2014 Dennis E. Hamilton
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
 
 TODO
+
+ * Add the missing DefaultRun.bat script.
 
  * Confirm that DefaultProject.txt being the same in DefaultProject.zip
    will not produce an "uncommitted change" when extracted from the
@@ -55,7 +79,7 @@ TODO
    execute the resulting Default.exe program.
 
  * Verify that the Default.exe runs on Windows versions from Windows XP to
-   Windows 10 Technical Preview.
+   Windows 10 Technical Preview.  It appears that it can't load on XP.
 
  * Verify that the VS Solution and Project work when the repository is cloned
    to a different computer location than the clone in which it was created.
@@ -63,13 +87,19 @@ TODO
  * Determine what down-level Visual Studio releases do with the VS 2013
    Solution and Project here.
 
- * Determine what different and up-level Visual Studio releases do with the
+ * Determine what different up-level Visual Studio releases do with the
    VS 2013 Solution and Project here, created by VS Express 2013 for Windows.
 
  * Make clear that the project uses VCShowDefs.c from the src/ folder.
 
+ * Verify that Default.exe will not operate on Windows XP and see if we can
+   determine exactly why.
+
  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-1.22 2014-12-04-18:02 Initial draft for the Default VS Project case.
+ 1.23 2014-12-07-18:36 Restructure Extraction
+      DefaultProject.zip is structured to depend on extraction into sub-
+      folder DefaultProject/ and documented accordingly.
+ 1.22 2014-12-04-18:02 Initial draft for the Default VS Project case.
 
                            *** end of Default.txt ***
