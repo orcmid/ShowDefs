@@ -1,4 +1,4 @@
-Default.txt 1.23                       UTF-8                    dh:2014-12-07
+Default.txt 1.25                       UTF-8                    dh:2014-12-08
 
        <https://github.com/orcmid/ShowDefs>/VS2013/Default/Default.txt
 
@@ -20,6 +20,8 @@ Default.txt 1.23                       UTF-8                    dh:2014-12-07
            into subfolder DefaultProject/ of this folder.
          * The Project depends on being able to locate src/VCshowDefs.c from
            where it is extracted.
+         * DefaultRun.bat depends on the the Project being successfully built
+           with the executable DefaultProject/Release/Default.exe created.
 
 MANIFEST
 
@@ -69,17 +71,8 @@ MANIFEST
 
 TODO
 
- * Add the missing DefaultRun.bat script.
-
- * Confirm that DefaultProject.txt being the same in DefaultProject.zip
-   will not produce an "uncommitted change" when extracted from the
-   DefaultProject.zip archive.
-
- * Add DefaultProject.bat for verifying that a build has occured and then
-   execute the resulting Default.exe program.
-
  * Verify that the Default.exe runs on Windows versions from Windows XP to
-   Windows 10 Technical Preview.  It appears that it can't load on XP.
+   Windows 10 Technical Preview.  (It appears that it can't load on XP.)
 
  * Verify that the VS Solution and Project work when the repository is cloned
    to a different computer location than the clone in which it was created.
@@ -90,13 +83,24 @@ TODO
  * Determine what different up-level Visual Studio releases do with the
    VS 2013 Solution and Project here, created by VS Express 2013 for Windows.
 
- * Make clear that the project uses VCShowDefs.c from the src/ folder.
-
  * Verify that Default.exe will not operate on Windows XP and see if we can
    determine exactly why.
 
+ * Provide a DefaultTest.bat that runs DefaultRun.bat and captures the result
+   in a temporary location and compares it with DefaultRun.txt, the result
+   obtained by the author following the instructions.
+
+ * Define precisely how DefaultProject.zip is to be extracted, with creation
+   of a DefaultProject/ folder holding the extracted files.
+
+ * Include the dependency caveats in DefaultProject.zip as well.
+
  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+ 1.25 2014-12-08-17:29 Complete DefaultRun.bat Testing
+      DefaultRun.bat is verified and DefaultProject.zip is updated to include
+      a modifiable version for use with the extracted, modifiable material.
+ 1.24 2014-12-08-09:00 Provide Initial DefaultRun.bat
  1.23 2014-12-07-18:36 Restructure Extraction
       DefaultProject.zip is structured to depend on extraction into sub-
       folder DefaultProject/ and documented accordingly.
