@@ -1,4 +1,4 @@
-DefaultProject.txt 0.00               UTF-8                    dh:2014-12-07
+DefaultProject.txt 0.01               UTF-8                    dh:2014-12-08
 
                      <https://github.com/orcmid/ShowDefs>
            /VS2013/Default/DefaultProject.zip/DefaultProject.txt
@@ -13,12 +13,17 @@ DefaultProject.txt 0.00               UTF-8                    dh:2014-12-07
     but they do not impact compilation.
 
     The result can be demonstrated by extracting the project, building the
-    program, and executing the ShowDefs/VS2013/Default/DefaultRun.bat script.
+    program, and executing the ShowDefs/VS2013/Default/DefaultRun.bat script
+    or the DefaultRun.bat that is part of this package.
 
 MANIFEST
 
     DefaultProject.txt
         This manifest, summary, and job jar.
+
+    DefaultRun.bat
+        Windows batch script for executing the compiled Default.exe after
+        verifying that the compilation was produced.
 
     Default.sln
         Microsoft Visual Studio Solution for the default build case.
@@ -61,6 +66,8 @@ TODO
 
  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+ 0.01 2014-12-08-17:25 Add DefaultRun.bat
+      Incorporate a version designed to operate in the extracted folder.
  0.00 2014-12-07-18:51 Initial draft for the Default VS Project case.
 
                      *** end of DefaultProject.txt ***
