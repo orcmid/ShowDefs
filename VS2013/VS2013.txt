@@ -1,4 +1,4 @@
-VS2013.txt 1.23                       UTF-8                    dh:2014-12-07
+VS2013.txt 1.24                       UTF-8                    dh:2014-12-08
 
               <https://github.com/orcmid/ShowDefs>/VS2013/VS2013.txt
 
@@ -50,8 +50,8 @@ MANIFEST
         the material.
 
     Default/
-        VS2013 Project demonstrating the default behavior when given a
-        simple *.c file as the source code.
+        VS2013 Project demonstrating the pre-processor definitions
+        supplied when compiling a simple *.c file as the source code.
 
  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -84,13 +84,18 @@ TODO
  * Provide information about up-level, down-level and data that applies to
    the use of all of the VS2013 Projects here.
 
+ * Add any generic information about the use of VS2013 with the cases
+   for which there are projects here.
+
  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-1.23 2014-12-07-18:12 Introduce License and VS2013 download info
-     The ALv2 notice is added here along with links to Microsoft pages for the
-     free versions of VS2013.
-1.22 2014-12-04-15:52 VS2013 Structure
-     orcmid/ShowDefs VS2013/VS2013.txt added to explain this part of the
-     source tree.
+ 1.24 2014-12-08-17:16 Touch-Up
+      Minor change and reminder work item.
+ 1.23 2014-12-07-18:12 Introduce License and VS2013 download info
+      The ALv2 notice is added here along with links to Microsoft pages for
+      the free versions of VS2013.
+ 1.22 2014-12-04-15:52 VS2013 Structure
+      orcmid/ShowDefs VS2013/VS2013.txt added to explain this part of the
+      source tree.
 
                            *** end of VS2013.txt ***
