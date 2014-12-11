@@ -1,4 +1,4 @@
-Default.txt 1.25                       UTF-8                    dh:2014-12-08
+Default.txt 1.27                       UTF-8                    dh:2014-12-11
 
        <https://github.com/orcmid/ShowDefs>/VS2013/Default/Default.txt
 
@@ -120,6 +120,10 @@ TODO
 
  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+ 1.27 2014-12-11-14:26 Eliminate PDF Warnings
+      The Project Configuration is modified to not produce debugging infor-
+      mation so that the lack of PDB information for parts of the MT static
+      library will not create a blizzard of warning messages with VS2015.
  1.26 2014-12-10-16:09 Correction to use Static Libraries and not have any
       CRT DLL dependencies.  Add more work items and thinking out-loud.
  1.25 2014-12-08-17:29 Complete DefaultRun.bat Testing

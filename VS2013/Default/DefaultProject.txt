@@ -1,4 +1,4 @@
-DefaultProject.txt 0.02               UTF-8                    dh:2014-12-10
+DefaultProject.txt 0.03               UTF-8                    dh:2014-12-11
 
                      <https://github.com/orcmid/ShowDefs>
            /VS2013/Default/DefaultProject.zip/DefaultProject.txt
@@ -42,6 +42,9 @@ MANIFEST
     Default.vcproj.filters
         File used as part of the project settings in Visual Studio operation
 
+    Default.vcproj.user
+        Visual Studio Project User Options also
+
  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
                        Copyright 2014 Dennis E. Hamilton
@@ -65,6 +68,10 @@ TODO
 
  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+ 0.03 2014-12-11-14:40 Update Solution and Archive
+      The configuration options are set to not produce a PDB file
+      so that VS2015 Preview does not complain about lack of PDB in the MT
+      static library.  Default.vcproj.user is also preserved as a precaution.
  0.02 2014-12-10-16:21 Reflect modified source file and use of static linking
       of the run-time library into Default.exe.
  0.01 2014-12-08-17:25 Add DefaultRun.bat
