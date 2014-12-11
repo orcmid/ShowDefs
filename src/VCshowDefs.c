@@ -1,4 +1,4 @@
-/* VCshowDefs.c 1.22                  UTF-8                       2014-12-10
+/* VCshowDefs.c 1.23                  UTF-8                       2014-12-10
  *
  *             SHOW PRESENCE OF VISUAL C++ PREPROCESSOR DEFINES
  *
@@ -27,7 +27,7 @@
 
 
 #include <stdio.h>
-      /* for printf() */
+      /* for stdout, fputs() and fputc() */
 
 #include <string.h>
       /* for strlen() */
@@ -35,13 +35,15 @@
 #define TV(X) #X ""
       /* Always produce a string, even when X is empty */
 
-#define SHOW(X, SP) printf(SP #X " %s\n", \
-                            ( tv = TV(X), \
-                              strlen(tv) == 0 \
+#define SHOW(X, SP) fputs(SP #X " ", stdout);  \
+                    fputs( ( tv = TV(X), \
+                             strlen(tv) == 0 \
                                 ? "is defined" \
                                 : strcmp(tv, #X) == 0 \
-                                    ? "undefined" \
-                                    : TV(is defined to X) ) )
+                                     ? "undefined" \
+                                     : TV(is defined to X) ), \
+                           stdout); \
+                    fputc('\n', stdout);
 
       /* The macro prints a line where the token X is right-justified
          after the string of spaces SP, and then followed with one of
@@ -53,7 +55,7 @@
          the program to discover the settings that were applied at
          compile time.
             See the main() function for declaration of the string
-         variable tv that is set and used in the expression.
+         variable tv that is set and used in the SHOW macro.
          */
 
 #ifdef _MSC_VER
@@ -69,11 +71,13 @@ int main(void)
 
        char *tv;  /* pointer to the token value string */
 
-       printf("\nVCshowDefs> 1.22 Check for documented pre-processor macros");
-       printf("\n            that might be predefined in this compile.\n");
+       fputs(  "VCshowDefs> 1.23 Check for documented pre-processor macros", 
+              stdout);
+       fputs("\n            that might be predefined in this compile.\n", 
+              stdout);
 
 
-       printf("\n  Supported ANSI/ISO Macros:\n");
+       fputs("\n  Supported ANSI/ISO Macros:\n", stdout);
 
        SHOW(__DATE__, "                ");
        SHOW(__FILE__, "                ");
@@ -81,7 +85,7 @@ int main(void)
        SHOW(__STDC__, "                ");
        SHOW(__TIME__, "                ");
 
-       printf("\n  Supported (VC++?) reflection support:\n");
+       fputs("\n  Supported (VC++?) reflection support:\n", stdout);
 
        SHOW(__COUNTER__, "             ");
        SHOW(__cplusplus, "             ");
@@ -90,7 +94,7 @@ int main(void)
        SHOW(__FUNCSIG__, "             ");
        SHOW(__TIMESTAMP__, "           ");
 
-       printf("\n  VC++ MS-Specific Macros:\n");
+       fputs("\n  VC++ MS-Specific Macros:\n", stdout);
 
        SHOW(_ATL_VER, "                ");
        SHOW(_CHAR_UNSIGNED, "          ");
@@ -116,7 +120,8 @@ int main(void)
        SHOW(_WIN32, "                  ");
        SHOW(_WIN64, "                  ");
 
-       printf("\n  And some favorites when compiling Windows code:\n");
+       fputs("\n  And some favorites when compiling Windows code:\n", 
+             stdout);
 
        SHOW(_INC_WINDOWS, "            ");
        SHOW(_MAC, "                    ");
@@ -142,8 +147,11 @@ int main(void)
 
 
 
-/*    1.22 2014-12-10-16:03 Use int main(void)
- *         Changed to pass all-warnings compiles without complaint
+/*    1.23 2014-12-10-17:54 Switch from printf(s) to fputs(s, stdout)
+ *         The SHOW macro and all direct output is changed to fputs()
+ *         and fputc() using stdout, just for simplicity of operation.
+ *    1.22 2014-12-10-16:03 Use int main(void)
+ *         Changed for compiling with no complaints using /Wall warnings
  *    1.21 2014-12-03-17:17 Renamed VCshowdefs.c to emphasize the focus on
  *         defines that apply in VC++ compiles in Visual Studio and with the
  *         command-line compiler.  Put under Apache License Version 2.0.
