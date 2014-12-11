@@ -1,4 +1,4 @@
-VS2013.txt 1.24                       UTF-8                    dh:2014-12-08
+VS2013.txt 1.25                       UTF-8                    dh:2014-12-10
 
               <https://github.com/orcmid/ShowDefs>/VS2013/VS2013.txt
 
@@ -87,8 +87,15 @@ TODO
  * Add any generic information about the use of VS2013 with the cases
    for which there are projects here.
 
+ * Add prerequisites, with links to more on satisfying the prerequisites.
+
+ * We need some images and related documentation here where it is common to
+   all of the cases in this folder.
+
  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+ 1.25 2014-12-10-16:33 Additional Explanation
+      More work items.
  1.24 2014-12-08-17:16 Touch-Up
       Minor change and reminder work item.
  1.23 2014-12-07-18:12 Introduce License and VS2013 download info
