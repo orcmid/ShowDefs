@@ -1,4 +1,4 @@
-src.txt 1.23                          UTF-8                    dh:2014-12-07
+src.txt 1.24                          UTF-8                    dh:2014-12-10
 
                  <https://github.com/orcmid/ShowDefs>/src/src.txt
 
@@ -57,8 +57,14 @@ TODO
  * Find the example that was my original inspiration for this use of the
    pre-processor back in 2005, if not before.
 
+ * Along with preference for static library binding, see if there is a way
+   to use something simpler than printf() for the output, even if that does
+   not shrink the .EXE.
+
  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+ 1.24 2014-12-10-16:01 Tasks and Cleanup
+      Switched to int main(void) to pass /Wall compilation, and added TODOs
  1.23 2014-12-07-15:55 Include ALv2 Notice
       The notice is included just to be consistent everywhere.
  1.22 2014-12-04-13:44 Provide initial GitHub orcmid/ShowDefs src/ structure.

@@ -1,4 +1,4 @@
-/* VCshowDefs.c 1.21                  UTF-8                       2014-12-03
+/* VCshowDefs.c 1.22                  UTF-8                       2014-12-10
  *
  *             SHOW PRESENCE OF VISUAL C++ PREPROCESSOR DEFINES
  *
@@ -62,14 +62,14 @@
 #endif
 
 
-int main()
+int main(void)
    {/* Report the status of predefined pre-processor variables that
        were defined or not when this program was compiled.
        */
 
        char *tv;  /* pointer to the token value string */
 
-       printf("\nVCshowDefs> 1.21 Check for documented pre-processor macros");
+       printf("\nVCshowDefs> 1.22 Check for documented pre-processor macros");
        printf("\n            that might be predefined in this compile.\n");
 
 
@@ -142,7 +142,9 @@ int main()
 
 
 
-/*    1.21 2014-12-03-17:17 Renamed VCshowdefs.c to emphasize the focus on
+/*    1.22 2014-12-10-16:03 Use int main(void)
+ *         Changed to pass all-warnings compiles without complaint
+ *    1.21 2014-12-03-17:17 Renamed VCshowdefs.c to emphasize the focus on
  *         defines that apply in VC++ compiles in Visual Studio and with the
  *         command-line compiler.  Put under Apache License Version 2.0.
  *    1.20 2014-12-02-18:05 Reviving this little toy to help me verify some
