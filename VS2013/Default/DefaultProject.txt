@@ -1,4 +1,4 @@
-DefaultProject.txt 0.01               UTF-8                    dh:2014-12-08
+DefaultProject.txt 0.02               UTF-8                    dh:2014-12-10
 
                      <https://github.com/orcmid/ShowDefs>
            /VS2013/Default/DefaultProject.zip/DefaultProject.txt
@@ -8,9 +8,10 @@ DefaultProject.txt 0.01               UTF-8                    dh:2014-12-08
 
     DefaultProject.zip contains a Visual Studio 2013 Project for building the
     VCShowDefs.c program.  The VS2013 default settings are used for making a
-    Release build.  There are no other compilation setting beyond choosing to
-    build a release.  There are some convenience settings used by the author,
-    but they do not impact compilation.
+    Release build.  There are no other compilation setting about the language
+    being compiled beyond choosing to build a release with static binding of
+    the run-time library.  There are some convenience settings used by the
+    author that do not impact the code compiled.
 
     The result can be demonstrated by extracting the project, building the
     program, and executing the ShowDefs/VS2013/Default/DefaultRun.bat script
@@ -59,15 +60,16 @@ MANIFEST
 
 TODO
 
- * Verify that the extraction will work when DefaultProject/ already exists.
-
  * Complete description of prerequisites, extraction, and building the
    project.
 
  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+ 0.02 2014-12-10-16:21 Reflect modified source file and use of static linking
+      of the run-time library into Default.exe.
  0.01 2014-12-08-17:25 Add DefaultRun.bat
       Incorporate a version designed to operate in the extracted folder.
+      This one is outside of the source tree and freely modifiable.
  0.00 2014-12-07-18:51 Initial draft for the Default VS Project case.
 
                      *** end of DefaultProject.txt ***

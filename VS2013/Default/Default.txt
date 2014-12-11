@@ -14,14 +14,14 @@ Default.txt 1.25                       UTF-8                    dh:2014-12-08
     program, and executing the program using the DefaultProject.bat script.
 
     *** IMPORTANT ***
-        The VS2013 Project and DefaultProject.bat are designed to be operated
-        from working locations here.
+        The VS2013 Project and DefaultRun.bat are designed to be operated
+        from their working locations in this code tree.
          * DefaultRun.bat depends on DefaultProject.zip being extracted
            into subfolder DefaultProject/ of this folder.
-         * The Project depends on being able to locate src/VCshowDefs.c from
-           where it is extracted.
+         * The Project depends on being able to locate src\VCshowDefs.c from
+           DefaultProject\
          * DefaultRun.bat depends on the the Project being successfully built
-           with the executable DefaultProject/Release/Default.exe created.
+           with the executable DefaultProject\Release\Default.exe in result.
 
 MANIFEST
 
@@ -51,7 +51,8 @@ MANIFEST
         used.  The working folder is not part of the Git Source Tree and its
         contents will not be preserved in the source-code control system. If
         the folder does not exist, it will be created when DefaultProject.zip
-        is extracted.
+        is extracted.  Any local adaptations can be made there and kept out of
+        the DefaultProject.zip file.
 
  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -76,27 +77,51 @@ TODO
 
  * Verify that the VS Solution and Project work when the repository is cloned
    to a different computer location than the clone in which it was created.
+   DONE 2014-12-09.
 
  * Determine what down-level Visual Studio releases do with the VS 2013
    Solution and Project here.
 
  * Determine what different up-level Visual Studio releases do with the
    VS 2013 Solution and Project here, created by VS Express 2013 for Windows.
+   DONE 2014-12-09: Other VS 2013 versions simply use the project.  VS 2015
+   Preview will update the Solution and Project information in a benign way.
 
  * Verify that Default.exe will not operate on Windows XP and see if we can
    determine exactly why.
 
  * Provide a DefaultTest.bat that runs DefaultRun.bat and captures the result
    in a temporary location and compares it with DefaultRun.txt, the result
-   obtained by the author following the instructions.
+   obtained by the author following the instructions.  Since there are time-
+   stamp differences in separate runs, those much be accounted for somehow.
 
  * Define precisely how DefaultProject.zip is to be extracted, with creation
    of a DefaultProject/ folder holding the extracted files.
 
  * Include the dependency caveats in DefaultProject.zip as well.
 
+ * I think it would be useful to have DefaultRun.bat in both places.  I think
+   it would be better to have it in one place.  An alternative might be to
+   have a simple relay, except that would fail if DefaultProject.zip has not
+   been expanded.  So it can't be that simple.  Also, it may be valuable
+   to keep DefaultRun.bat here in case the one in DefaultProject\ is mangled.
+
+ * Document the specific VS 2013 options that are set for these compiles.
+   This is not strictly a default compilation in that respect, it is one
+   with some preferences, but default behavior with respect to the language
+   that is compiled.
+
+ * Update to use build with static library and see how that works up-/down-
+   level and whether that makes things work on Windows XP.
+
+ * Try signing the Default.exe (extra credit) after getting command-line
+   compiles working so we have vcvars.bat figured out before installing
+   SDK 8.1.
+
  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+ 1.26 2014-12-10-16:09 Correction to use Static Libraries and not have any
+      CRT DLL dependencies.  Add more work items and thinking out-loud.
  1.25 2014-12-08-17:29 Complete DefaultRun.bat Testing
       DefaultRun.bat is verified and DefaultProject.zip is updated to include
       a modifiable version for use with the extracted, modifiable material.
