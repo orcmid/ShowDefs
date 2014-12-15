@@ -1,4 +1,4 @@
-DefaultProject.txt 0.03               UTF-8                    dh:2014-12-11
+DefaultProject.txt 0.04               UTF-8                    dh:2014-12-14
 
                      <https://github.com/orcmid/ShowDefs>
            /VS2013/Default/DefaultProject.zip/DefaultProject.txt
@@ -68,6 +68,9 @@ TODO
 
  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+ 0.04 2014-12-14-16:08 Simplify DefaultRun.bat Usage
+      The script is modified so it can be executed without having to make
+      its location (%~dp0) the current directory.
  0.03 2014-12-11-14:40 Update Solution and Archive
       The configuration options are set to not produce a PDB file
       so that VS2015 Preview does not complain about lack of PDB in the MT
