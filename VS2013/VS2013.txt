@@ -1,4 +1,4 @@
-VS2013.txt 1.25                       UTF-8                    dh:2014-12-10
+VS2013.txt 1.25                       UTF-8                    dh:2014-12-15
 
               <https://github.com/orcmid/ShowDefs>/VS2013/VS2013.txt
 
@@ -92,9 +92,18 @@ TODO
  * We need some images and related documentation here where it is common to
    all of the cases in this folder.
 
+ * Add cmd.exe and batch scripts to prerequisites.
+
+ * Add anything about other shells that these scripts will run with,
+   including MSYS2.  Also, that MSYS2 will run VS solutions using
+   start *.sln commands.
+
+ * Add more about how to start VS in VS2013 projects, and how to execute
+   the command-line applications from within console shells.
+
  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
- 1.25 2014-12-10-16:33 Additional Explanation
+ 1.25 2014-12-15-18:39 Additional Explanation
       More work items.
  1.24 2014-12-08-17:16 Touch-Up
       Minor change and reminder work item.
