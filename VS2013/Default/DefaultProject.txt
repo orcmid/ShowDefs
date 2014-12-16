@@ -1,4 +1,4 @@
-DefaultProject.txt 0.04               UTF-8                    dh:2014-12-14
+DefaultProject.txt 0.05               UTF-8                    dh:2014-12-15
 
                      <https://github.com/orcmid/ShowDefs>
            /VS2013/Default/DefaultProject.zip/DefaultProject.txt
@@ -68,6 +68,7 @@ TODO
 
  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+ 0.05 2014-12-15-18:26 Touch-up DefaultRun.bat a little
  0.04 2014-12-14-16:08 Simplify DefaultRun.bat Usage
       The script is modified so it can be executed without having to make
       its location (%~dp0) the current directory.
