@@ -1,47 +1,41 @@
 @echo off
-rem DefaultRun.bat 0.01               UTF-8                    dh:2014-12-08
-ECHO * DefaultRun.bat 0.01 SHOW DEFAULT VS2013 VC PROJECT #DEFINE VARIABLES
-ECHO:
+rem DefaultRun.bat 0.03               UTF-8                    dh:2014-12-15
+rem The identifying line is produced using the :ANNOUNCE procedure.
 
-rem **** TO CUSTOMIZE THIS SCRIPT, COPY TO A SEPARATE WORKING LOCATION
+rem **** DO NOT MODIFY THIS SCRIPT IN THE SHOWDEF VS2013\DEFAULT CODE TREE
 rem ****    This version is part of the public source tree and should not
-rem ****    be customized locally.  An alternative is to customize the
-rem ****    version that is extracted from DefaultProject.zip.  That one can
-rem ****    be customized in DefaultProject\ without source-tree impact.
+rem ****    be modified in place.  The script in the folder extracted from
+rem ****    DefaultProject.zip is a local-only, modifiable working copy.
 
-rem REQUIRE EXECUTION IN THE SAME DIRECTORY AS THE SCRIPT
-IF NOT EXIST "DefaultRun.bat" GOTO :FAIL1
-IF NOT EXIST "DefaultProject.txt" GOTO :FAIL1
-IF NOT EXIST "DefaultProject.zip" GOTO :FAIL1
-IF NOT EXIST "Default.txt" GOTO :FAIL1
-rem     Confirm as well as possible we're in the correct project location
+rem REQUIRE SCRIPT STORED IN THE SAME DIRECTORY (%~dp0) AS DEFAULT\ CODE
+IF NOT EXIST "%~dp0DefaultRun.bat" GOTO :FAIL1
+IF NOT EXIST "%~dp0DefaultProject.txt" GOTO :FAIL1
+IF NOT EXIST "%~dp0DefaultProject.zip" GOTO :FAIL1
+IF NOT EXIST "%~dp0Default.txt" GOTO :FAIL1
+rem     Confirm as well as possible we're in a Default\ folder.
 
-rem REQUIRE DEFAULTPROJECT.ZIP EXTRACTED
-IF NOT EXIST "DefaultProject\Default.sln" GOTO :FAIL2
-IF NOT EXIST "DefaultProject\Default.vcxproj" GOTO :FAIL2
-IF NOT EXIST "DefaultProject\Default.vcxproj.filters" GOTO :FAIL2
-IF NOT EXIST "DefaultProject\DefaultProject.txt" GOTO :FAIL2
-
-rem REQUIRE DEFAULT.EXE COMPILED
-IF NOT EXIST "DefaultProject\Release\Default.exe" GOTO :FAIL3
+rem REQUIRE DEFAULTPROJECT.ZIP EXTRACTED TO SUBFOLDER
+IF NOT EXIST "%~dp0DefaultProject\DefaultRun.bat" GOTO :FAIL2
 
 rem EXECUTE DEFAULT.EXE
-DefaultProject\Release\Default.exe
-ECHO:
-EXIT /B 0
+"%~dp0DefaultProject\DefaultRun.bat"
+rem  quotes (") required in case there are spaces in %~dp0
+EXIT
 
 :FAIL1
-ECHO * EXECUTION IS NOT IN THE PROPER FOLDER LOCATION
-ECHO *     This DefaultRun.bat must be executed in the ShowDefs code-tree
-ECHO *     folder VS2013\Default\ where it is stored.  Nothing should have
-ECHO *     been deleted there.  Change the current working directory to that
-ECHO *     location and re-attempt.
+CALL :ANNOUNCE
+ECHO * SCRIPT IS NOT IN THE PROPER FOLDER LOCATION
+ECHO *     This DefaultRun.bat must be located in the ShowDefs code-tree
+ECHO *     VS2013\Default\ folder, wherever it has been located.  Nothing
+ECHO *     should have been modified there.  The script may be referenced
+ECHO *     so long as it is in a location with the Default\ material.
 ECHO:
 EXIT /B 2
 
 :FAIL2
+CALL :ANNOUNCE
 ECHO * DEFAULTPROJECT\ SOLUTION FILES NOT FOUND
-ECHO *     The DefaultProject\ folder with needed solution files is not found.
+ECHO *     The DefaultProject\ folder and needed files are not found.
 ECHO *     It is necessary to extract the DefaultProject.zip archive into
 ECHO *     the DefaultProject\ subfolder and use Visual Studio to employ the
 ECHO *     Default.sln and other files to build Default.exe.  For details of
@@ -49,15 +43,12 @@ ECHO *     that procedure, consult file DefaultProject.txt.
 ECHO:
 EXIT /B 2
 
-:FAIL3
-ECHO * DEFAULT.EXE NOT FOUND
-ECHO *     Successful build of the Default Project will produce the file
-ECHO *     DefaultProject\Release\Default.exe.  Verify that the Visual Studio
-ECHO *     solution has been opened and a successful build completed.  For
-ECHO *     details of VS2013 solution-building, consult file VS2013.txt
-ECHO *     in the ShowDefs VS2013\ folder.
+:ANNOUNCE
+rem Identify this script only if we're done here.
+ECHO * DefaultRun.bat 0.03 SHOW DEFAULT VS2013 VC PROJECT #DEFINE VARIABLES
 ECHO:
-EXIT /B 2
+EXIT /B 0
+rem Exit /B code required to prevent global exit.
 
 rem -----1---------2---------3---------4---------5---------6---------7-------*
 
@@ -77,6 +68,12 @@ rem limitations under the License.
 
 rem -----1---------2---------3---------4---------5---------6---------7-------*
 
+rem 0.03 2014-12-15-18:00 Simplify the validation to the minimum required to
+rem      do the job, and then use the DefaultProject\DefaultRun.bat.
+rem 0.02 2014-12-14-14:36 Change to work relative to script location
+rem      %~dp0 qualifiers signify the d:\p\, the drive and path where the
+rem      script is located at, upgrading checks to the latest DefaultProject\
+rem      structure.
 rem 0.01 2014-12-08-16:49 Adjust Error Messages
 rem      Improve checks and messages after DefaultProject.zip version review.
 rem 0.00 2014-12-08-16:01 Create Run Script

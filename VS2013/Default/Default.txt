@@ -1,4 +1,4 @@
-Default.txt 1.27                       UTF-8                    dh:2014-12-11
+Default.txt 1.28                       UTF-8                    dh:2014-12-15
 
        <https://github.com/orcmid/ShowDefs>/VS2013/Default/Default.txt
 
@@ -118,9 +118,18 @@ TODO
    compiles working so we have vcvars.bat figured out before installing
    SDK 8.1.
 
+ * Fix DefaultRun.bat to work with %~dp0 and verify that the location is
+   correct.
+
+ * Fix the DefaultRun.bat in DefaultProject.zip to work accordingly.
+
  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
- 1.27 2014-12-11-14:26 Eliminate PDF Warnings
+ 1.28 2014-12-15-18:34 Revise Batch Files
+      The DefaultRun batch files are modified to use their own locations
+      and access the related material even when executed from a different
+      current shell directory.
+ 1.27 2014-12-11-14:26 Eliminate PDB Warnings
       The Project Configuration is modified to not produce debugging infor-
       mation so that the lack of PDB information for parts of the MT static
       library will not create a blizzard of warning messages with VS2015.
