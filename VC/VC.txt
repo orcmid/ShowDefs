@@ -1,4 +1,4 @@
-VC.txt 0.01                          UTF-8                    dh:2014-12-18
+VC.txt 0.00                          UTF-8                    dh:2014-12-13
 
                 <https://github.com/orcmid/ShowDefs>/VC/VC.txt
 
@@ -48,9 +48,9 @@ MANIFEST
         This description file on the construction and organization of
         the material.
 
-    .gitignore
-        Git file for excluding the VCbind/ folder from the ShowDefs source-
-        code tree.
+    VCbind.bat
+        A convenience script for exercising the script extracted as part of
+        VCbind.zip
 
     VCbind.txt
         The manifest and procedures applicable to use of VCbind.zip
@@ -110,9 +110,6 @@ TODO
 
  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
- 0.01 2014-12-18-18:41 Adjust Manifest
-      .gitignore is accounted for and the convenience file VCbind.bat is
-      eliminated from the VC/ level.
  0.00 2014-12-13-15:12 Placeholcer for the C/C++ for VC Command-Line Compiles
       Initiate structure for command-line compilations analogous to the VS2013
       Projects.
