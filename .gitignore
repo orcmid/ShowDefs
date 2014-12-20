@@ -1,4 +1,4 @@
-# .gitignore 0.03                     UTF-8                    dh:2014-12-07
+# .gitignore 0.04                     UTF-8                    dh:2014-12-20
 #
 #                                ORCMID/SHOWDEFS
 #                                ===============
@@ -185,7 +185,7 @@ sql/
 ClientBin/
 [Ss]tyle[Cc]op.*
 ~$*
-*~
+*~*
 *.dbmdl
 *.dbproj.schemaview
 *.pfx
@@ -217,6 +217,8 @@ FakesAssemblies/
 
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# 0.04 2014-12-20-08:31 Prevent Short Names
+#      The use of short names like git~1 is blocked
 # 0.03 2014-12-07-17:59 Tidy Up
 #      I am providing local .gitignore for entire solution subdirectories,
 #      because of artifacts in addition to Visual Studio's that I might have
