@@ -1,4 +1,4 @@
-VS2013.txt 1.25                       UTF-8                    dh:2014-12-15
+VS2013.txt 1.26                       UTF-8                    dh:2014-12-16
 
               <https://github.com/orcmid/ShowDefs>/VS2013/VS2013.txt
 
@@ -101,8 +101,31 @@ TODO
  * Add more about how to start VS in VS2013 projects, and how to execute
    the command-line applications from within console shells.
 
+ * Attempting start Default.sln from MSYS2 works but VS2013 fails to find
+   what it needs.  I think this is because MSYS2 has altered the environment
+   variables.  It may require a cmd.exe startup with a fresh environment, so
+   the rewritten environment does not interfere.  What Visual Studio needs is
+   already in the global environment.  This may show up in VC\ also.
+      Exploring the set parameters, there are two problems.  MSYS2 rewrites
+   the PATH environment variable.  It also rewrite the TEMP and TMP variables,
+   putting the original values in temp and tmp.  This seems rather backwards.
+   However, if MSYS2 executes cmd.exe, the TEMP and TMP are made useful and
+   the path variables seem to work.
+      Apparently the problem has to do with case sensitivity and the fact
+   that both TEMP and temp are defined in the environment passed down by
+   MSYS2 to cmd.exe.  This may be creating a conflict in the cl.exe working
+   with environment variables.  There are ways to fix that in a script.  I
+   must experiment more.
+
+ * I need HOWTOs here, rather than these sketchy descriptions.  They should be
+   on HOWTO create new projects using this kind of structure, how to make the
+   scripts, etc.  Although it is redundant to have that sort of thing repeated
+   all through here, it should be done as teething exercises and learning-
+   curve until I can set the data up on a web site or wiki. -- orcmid
+
  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+ 1.26 2014-12-16-08:40 Work items on MSYS2 conflict and desire for HOWTOs
  1.25 2014-12-15-18:39 Additional Explanation
       More work items.
  1.24 2014-12-08-17:16 Touch-Up
