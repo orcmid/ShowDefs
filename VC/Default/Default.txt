@@ -1,0 +1,134 @@
+Default.txt 0.00                      UTF-8                    dh:2014-12-26
+
+       <https://github.com/orcmid/ShowDefs>/VC/Default/Default.txt
+
+               DEFAULT SHOWDEFS IN VISUAL C/C++ CONSOLE COMPILES
+               =================================================
+
+    This folder provides a structure for building and executing the
+    VCShowsDef.c program.  Basic options are used for compiling a
+    Release build comparable to what is accomplished with a basic
+    Visual Studio compilation.  The idea is to provide the command-
+    line counterpart of the ShowDefs\VS2013\Default compilation.
+
+    The result can be demonstrated by extracting DefaultProject.zip,
+    making any necessary script adjustments, and then using the
+    DefaultBuild.bat script to compile and the DefaultRun.bat to
+    execute the result of a successful compile.
+
+    *** IMPORTANT ***
+        The DefaultBuild.bat and DefaultRun.bat are designed to be
+        used in their locations in VC\Default\ and VC\DefaultDefaultProject\
+        respectively.
+         * DefaultBuild.bat depends on VC\VCbind.bat being in that
+           location and its prerequisites being satisfied there.
+         * DefaultRun depends on DefaultProject.zip being extracted
+           into Default\DefaultProject\.
+         * DefaultBuild depends on being able to locate ShowDefs\src\ from
+           ShowDefs\VC\Default\DefaultProject\
+         * DefaultRun depends on there being a successful compile with result
+           Default\DefaultProject\Release\Default.exe
+
+    The purpose is to provide command-line compilation that can be used
+    whether or not the Visual Studio IDE is used.  This and its cousins
+    are intended to demonstrate customizations that can be used for similar
+    purpose in other C/C++ projects targeted to the Windows platform.
+
+MANIFEST
+
+    Default.txt
+        This manifest, summary, and job jar.
+
+    .gitignore
+        Exclusion of DefaultProject/ from the source tree
+
+    DefaultBuild.bat
+        Windows batch command script that is useful for compiling a
+        Default.exe
+
+    DefaultRun.bat
+        Windows batch command script that is useful for executing the
+        compiled Default.exe.
+
+    DefaultProject.txt
+        Manifest, summary and job jar for DefaultProject.zip, describing
+        how to extract and use Default\DefaultProject\ for demonstrating
+        Default.exe compilation and execution.
+
+    DefaultProject.zip
+        Zip Archive containing the scripts and associated data that can
+        be extracted in place for compiling a Default.exe that presents
+        default pre-processor labels that are defined (or not) in the
+        compilation
+
+    DefaultProject/
+        This is a working folder in which the script files are extracted and
+        used.  The working folder is not part of the Git Source Tree and its
+        contents will not be preserved in the source-code control system. If
+        the folder does not exist, it will be created when DefaultProject.zip
+        is extracted.  Any local adaptations can be made there and kept out of
+        the DefaultProject.zip file.
+
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+                       Copyright 2014 Dennis E. Hamilton
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+TODO
+
+ * Set up DefaultProject.zip and the DefaultBuild.bat and DefaultRun.bat
+   scripts at this level.
+
+ * Do the Default\DefaultProject level to get compiles and executions
+   working.
+
+ * Verify whether Default.exe runs on Windows versions from Windows XP to
+   Windows 10 Technical Preview.
+
+ * Verify that the scripts work properly when portions of the source tree
+   are cloned to a different computer location than in the source tree itself.
+
+ * Determine what the difference with down-level versions of VC compilers
+   when pre-2013 versions of Visual Studio or the Platform SDK are used.
+
+ * Determine what different up-level Visual Studio releases do when the
+   compilers provided with post-2013 version of Visual Studio or the
+   Platform SDK are used.
+
+ * Provide a DefaultTest.bat that runs DefaultRun.bat and captures the result
+   in a temporary location and compares it with DefaultRun.txt, the result
+   obtained by the author following the instructions.  Since there are time-
+   stamp differences in separate runs, those much be accounted for somehow.
+
+ * Define precisely how DefaultProject.zip is to be extracted, with creation
+   of a DefaultProject/ folder holding the extracted files.
+
+ * Address the options options that are set for these compiles and how they
+   reflect the VS2013 counterpart compilations.  This is also not strictly a
+   default compilation, it is one with some preferences, but default behavior
+   with respect to the language that is compiled and what the target is.
+
+ * Capture enough information about the settings made here so that one can
+   detect any difference when Platform SDK 8.1 is installed in addition to
+   the basic Visual Studio 2013 Community Edition.
+
+ * Update the ShowDefs\VS2013\Default\Default.txt to reflect any improvements
+   here that can be transposed back to that file.
+
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ 0.00 2014-12-26-10:02 Initial draft for the Default VC compilation case,
+      forked from ShowDefs\VS2013\Default\Default.txt 1.28.
+
+                           *** end of Default.txt ***

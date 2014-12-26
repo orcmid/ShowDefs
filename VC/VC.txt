@@ -1,4 +1,4 @@
-VC.txt 0.02                          UTF-8                    dh:2014-12-25
+VC.txt 0.03                          UTF-8                    dh:2014-12-26
 
                 <https://github.com/orcmid/ShowDefs>/VC/VC.txt
 
@@ -96,10 +96,7 @@ MANIFEST
 
 TODO
 
- * Import an old MyVC++.bat and convert to a VCbind.bat script for adaptation
-   and use in all of the cases here.
-
- * Verify the structure with VS2013 and any other current VS installs.
+ * Verify the VC structure with VS2013 and any other current VS installs.
 
  * Verify the structure with cmd.exe, PowerShell, TC, and MSYS2 (POSIX)
    shells and possibly CYGWIN.  It is desirable that these batch scripts work
@@ -110,14 +107,10 @@ TODO
  * We need some images and related documentation here where it is common to
    all of the cases in this folder.
 
- * Create VCbind.zip and VCbind.txt
-
- * Create VC\VCbind.bat in a way that is usable from sibling folders.  This
-   must cope with the absence of a full path for the location of ShowDefs
-   and verify the required VC\VCbind\BCbind.bat presence.
-
  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+ 0.03 2014-12-26-10:06 Completion of some work items reflecting progress
+      with the Default example.
  0.02 2014-12-25-20:35 Bring back VCbind.bat as a relay in the manner of
       VS2013\Default\DefaultProject.bat.
  0.01 2014-12-18-18:41 Adjust Manifest
