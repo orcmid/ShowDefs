@@ -1,4 +1,4 @@
-VCbind.txt 0.00                       UTF-8                    dh:2014-12-19
+VCbind.txt 0.01                       UTF-8                    dh:2014-12-25
 
         <https://github.com/orcmid/ShowDefs>/VC/VCbind.zip/VCbind.txt
 
@@ -15,7 +15,6 @@ VCbind.txt 0.00                       UTF-8                    dh:2014-12-19
     compiler and companion development tools.  Environment variables are
     set up for use by the tools, including where to search for C/C++ #include
     files and search for .lib files for linking into compiled code.
-
 
 
 MANIFEST
@@ -50,9 +49,6 @@ MANIFEST
 
 TODO
 
- * Import an old MyVC++.bat and convert to a VCbind.bat script for adaptation
-   and use in all of the cases here.
-
  * Verify the structure with VS2013 and any other current VS installs.
 
  * Verify the structure with cmd.exe, PowerShell, TC, and MSYS2 (POSIX)
@@ -64,7 +60,7 @@ TODO
  * We need some images and related documentation here where it is common to
    all of the cases in this folder.
 
- * Create VCbind.zip and VCbind.txt
+ * Create VCbind.zip
 
  * Create VCbind.bat in a way that is usable from sibling folders.  This must
    cope with the absence of a full path for the location of ShowDefs as a
@@ -72,6 +68,8 @@ TODO
 
  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+ 0.01 2014-12-25-20:44 Use provisional VCbind.bat script for testing and
+      establishment of a more-resilient version.
  0.00 2014-12-19-10:08 Placeholcer for the C/C++ for VC Command-Line Compiles
       Initiate structure for command-line compilations analogous to the VS2013
       Projects.

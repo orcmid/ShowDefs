@@ -1,4 +1,4 @@
-VC.txt 0.01                          UTF-8                    dh:2014-12-18
+VC.txt 0.02                          UTF-8                    dh:2014-12-25
 
                 <https://github.com/orcmid/ShowDefs>/VC/VC.txt
 
@@ -37,6 +37,10 @@ BINDING THE VC COMPILER
     The VCbind.zip file is extracted to provide the script that establishes
     a compiler setup.  VCbind.txt describes that package and its usage.
 
+    The VCbind.run file here is used from other projects to check that
+    VCbind.zip is here and that a VCbind\VCbind.bat file is present and is
+    then used.
+
  EXAMPLE COMPILATIONS
     Each example is in its own subfolder, such as ShowDef\VC\Default.  The
     text file with the same name as the subfolder describes the procedure to
@@ -51,6 +55,12 @@ MANIFEST
     .gitignore
         Git file for excluding the VCbind/ folder from the ShowDefs source-
         code tree.
+
+    VCbind.bat
+        A batch script that can be used from any location to verify the
+        presence of VCbind and Vcbind\VCbind.bat here, then performing it
+        to establish the environment used by the different cases here,
+        such as Default.
 
     VCbind.txt
         The manifest and procedures applicable to use of VCbind.zip
@@ -102,14 +112,14 @@ TODO
 
  * Create VCbind.zip and VCbind.txt
 
- * Establish .gitignore for the VCbind/ directory.
-
- * Create VCbind.bat in a way that is usable from sibling folders.  This must
-   cope with the absence of a full path for the location of ShowDefs as a
-   working clone of the GitHub respository.
+ * Create VC\VCbind.bat in a way that is usable from sibling folders.  This
+   must cope with the absence of a full path for the location of ShowDefs
+   and verify the required VC\VCbind\BCbind.bat presence.
 
  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+ 0.02 2014-12-25-20:35 Bring back VCbind.bat as a relay in the manner of
+      VS2013\Default\DefaultProject.bat.
  0.01 2014-12-18-18:41 Adjust Manifest
       .gitignore is accounted for and the convenience file VCbind.bat is
       eliminated from the VC/ level.
