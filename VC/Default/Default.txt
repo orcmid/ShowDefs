@@ -1,4 +1,4 @@
-Default.txt 0.00                      UTF-8                    dh:2014-12-26
+Default.txt 0.01                      UTF-8                    dh:2014-12-26
 
        <https://github.com/orcmid/ShowDefs>/VC/Default/Default.txt
 
@@ -87,11 +87,27 @@ MANIFEST
 
 TODO
 
- * Set up DefaultProject.zip and the DefaultBuild.bat and DefaultRun.bat
-   scripts at this level.
+ * Spiff up VC.txt with material and narrative best centralized there and
+   only redundant if at this level.
+
+ * Set up DefaultProject.zip and DefaultProject.txt scripts at this level.
 
  * Do the Default\DefaultProject level to get compiles and executions
    working.
+
+ * Explain the %1 parameter on DefaultBuild.bat and also on VCbind.bat.
+
+ * In a production project, the Build.bat and the use of a Visual Studio
+   solution might co-exist.  It is tempting to merge the two *Project.zip
+   packages.  Yet another case is merging with a kind of makefile project.
+   I think it is wiser to keep them separate here, and think hard about
+   the difficulty of maintenance in applying these techniques in a serious
+   open-source activity.
+
+ * There needs to be something somewhere about the testing of these scripts
+   both for regression checking and also for testing modified or customized
+   scripts.  The checklist might be at a higher level, and it should be
+   located from the scripts here.  This applies to VS2013\ examples as well.
 
  * Verify whether Default.exe runs on Windows versions from Windows XP to
    Windows 10 Technical Preview.
@@ -128,6 +144,9 @@ TODO
 
  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+ 0.01 2014-12-26-11:04 Completion of this level of initial materials.
+      DefaultBuild.bat, DefaultRun.bat, DefaultProject.txt, .gitignore, and a
+      trivial DefaultProject.zip are introduced and verified.
  0.00 2014-12-26-10:02 Initial draft for the Default VC compilation case,
       forked from ShowDefs\VS2013\Default\Default.txt 1.28.
 
