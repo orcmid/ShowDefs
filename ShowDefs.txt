@@ -1,4 +1,4 @@
-ShowDefs.txt 1.27                     UTF-8                     dh:2014-12-08
+ShowDefs.txt 1.28                     UTF-8                     dh:2014-12-27
 
                <https://github.com/orcmid/ShowDefs>/ShowDefs.txt
 
@@ -15,6 +15,10 @@ ShowDefs.txt 1.27                     UTF-8                     dh:2014-12-08
     are usable along-side the provisions for use of Microsoft development
     tools.
 
+    Note: This repository is intended to be usable when cloned to a Microsoft
+    platform.  The notation for file paths reflects that, even though POSIX
+    path notation is used in the git and when viewed on GitHub.
+
 
 MANIFEST
 
@@ -28,7 +32,7 @@ MANIFEST
         including final executables and libraries that are not delivered
         in the code tree.  VS Solution and Project files are also excluded
         because working copies may change in ways that should not pollute
-        the archived forms.  See the VS2013/ folder for how this is avoided.
+        the archived forms.  See the VS2013\ folder for how this is avoided.
 
     LICENSE
         The Apache License, Version 2.0, plaintext form
@@ -37,10 +41,23 @@ MANIFEST
         The GitHub MarkDown text form use as the presented page
         of the project at <https://githug.com/orcmid/ShowDefs>
 
-    src/
+    docs\
+        folder for documentation of ShowDefs and the approach for simple
+        projects on Windows that target the Microsoft platform
+
+    src\
         folder of common source used across the various configurations
 
-    VS2103/
+    testing\
+        folder for how the components of the ShowDefs project are tested,
+        especially the various scripts, with guidance on how customizations
+        of the technique can also be tested.
+
+    VC\
+        folder for builds using the Visual Studio VC compiler from the
+        command line in console sessions instead of from within Visual Studio.
+
+    VS2103\
         folder for builds using pre-defined Visual Studio 2103 Solution
         and Project files for those
 
@@ -63,50 +80,60 @@ MANIFEST
 
 TODO
 
- * Add VC++/ and VC++.txt for the command-line adaptation, using batch files
-   to allow the VC++ tools to be used from within POSIX shells.  This should
+ * Add VC\ for the command-line adaptation, using batch files to allow
+   the VC++ tools to be used from within POSIX shells.  This should
    all run and build from under the MSYS2 shell as well as cmd.exe, Power-
    shell, TakeComand, etc.
+
+ * Add a testing.txt or maybe a testing folder?  The folder allows for
+   multiple testing cases housed in one place.  This is different than
+   tests on builds.  It is about the scripts and such here.
+
+ * Add a docs\ folder to provide a consolidation point for repetitive
+   information, also providing more about using this repository and
+   adapting the techniques it demonstrates.
+
+ * Emphasize that ShowDefs and the illustrative procedures that it gives us
+   examples for is all about building for Windows on Windows, relying on
+   Microsoft tools for that purpose, starting with cmd.exe and then the
+   developer tools.
 
  * Add WinGCC for the command-line adaptation using the version of GCC that
    installs with MSYS2 Dev Tools as a way to compile for Native Windows using
    GCC command-line usage.
+
+ * Add Clang for the command-line adaption as well and for how it will be
+   usable from within Visual Studio 2015.
 
  * Do something better with the README.md beyond the default that was created
    when the repository was initialized by GitHub.
 
  * Include NOTICE if and when needed.
 
- * Add VS2015/ using the initial Technology Preview and track until the
-   release version.  This will provide some Windows 10 Technical Preview
-   tracking as well.
-
- * Rename src/ to common/ because there could well be shim code at one of
-   the configuration-dependent subprojects.  Or maybe by the source code?
-   That would maybe make common/c, common/cs, common/java, that sort of thing?
-   I have to be careful about the path names that will then be involved.
-
  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-1.27 2014-12-08-09:00 Complete License Notices
-     The license notices have been placed on src/ and VS2013/ content
-1.26 2014-12-07-14:07 New Work Items
-     Pondering the naming of src/
-1.25 2014-12-06-08:37 Improve Summary
-     The summary is refined with the motivation for how Microsoft tooling is
-     supported alongside or part of the use of other tool chains, along with
-     other touch-ups.
-1.24 2014-12-05-21:31 Expand Project Content
-     .gitignore is accounted for along with the VS2013/ folder for exploring
-     pre-processor variables that are set when including various VS2013 C/C++
-     projects.  Add license claim.
-1.23 2014-12-04-13:34 Provide Initial Manifest
-     Don't duplicate what is in the README.  But use this to have versioning
-     on the package and have some history that works when the code is down-
-     loaded in a package and not as a Git repository.  The LICENSE and
-     README.md are added.  Add src/ here and start with src.txt there too.
-1.22 2014-12-04-10:41 Create placeholder to "prime the pump" as kicking off
-     GitHub orcmid/ShowDefs.  This is 1.22 in order to synchronize with the
-     older history of the file that was started in 2005.
+ 1.28 2014-12-27-07:43 Add VC\, testing\, and docs\
+      The text and work items are cleaned up and three additional sub-
+      directories accounted for.
+ 1.27 2014-12-08-09:00 Complete License Notices
+      The license notices have been placed on src/ and VS2013/ content
+ 1.26 2014-12-07-14:07 New Work Items
+      Pondering the naming of src/
+ 1.25 2014-12-06-08:37 Improve Summary
+      The summary is refined with the motivation for how Microsoft tooling is
+      supported alongside or part of the use of other tool chains, along with
+      other touch-ups.
+ 1.24 2014-12-05-21:31 Expand Project Content
+      .gitignore is accounted for along with the VS2013/ folder for exploring
+      pre-processor variables that are set when including various VS2013 C/C++
+      projects.  Add license claim.
+ 1.23 2014-12-04-13:34 Provide Initial Manifest
+      Don't duplicate what is in the README.  But use this to have versioning
+      on the package and have some history that works when the code is down-
+      loaded in a package and not as a Git repository.  The LICENSE and
+      README.md are added.  Add src/ here and start with src.txt there too.
+ 1.22 2014-12-04-10:41 Create placeholder to "prime the pump" as kicking off
+      GitHub orcmid/ShowDefs.  This is 1.22 in order to synchronize with the
+      older history of the file that was started in 2005.
 
                        *** end of ShowDefs.txt ***
