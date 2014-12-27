@@ -1,5 +1,5 @@
 @echo off
-rem DefaultRun.bat 0.00               UTF-8                    dh:2014-12-26
+rem DefaultRun.bat 0.01               UTF-8                    dh:2014-12-27
 rem The identifying line is produced using the :ANNOUNCE procedure.
 
 rem **** DO NOT MODIFY THIS SCRIPT IN THE SHOWDEF VC\DEFAULT CODE TREE
@@ -9,11 +9,11 @@ rem ****    DefaultProject.zip is a local-only, modifiable working copy.
 
 rem REQUIRE SCRIPT STORED IN THE SAME DIRECTORY (%~dp0) AS DEFAULT\ CODE
 IF NOT EXIST "%~dp0DefaultRun.bat" GOTO :FAIL1
-IF NOT EXIST "%-dp0DefaultBuild.bat" GOTO :FAIL1
+IF NOT EXIST "%~dp0DefaultBuild.bat" GOTO :FAIL1
 IF NOT EXIST "%~dp0DefaultProject.txt" GOTO :FAIL1
 IF NOT EXIST "%~dp0DefaultProject.zip" GOTO :FAIL1
 IF NOT EXIST "%~dp0Default.txt" GOTO :FAIL1
-IF NOT EXIST "%~dp0.gitignore" GOTO :FAIL1
+rem IF NOT EXIST "%~dp0.gitignore" GOTO :FAIL1
 rem     Confirm as well as possible we're in a Default\ folder.
 
 rem REQUIRE DEFAULTPROJECT.ZIP EXTRACTED TO SUBFOLDER
@@ -46,7 +46,7 @@ EXIT /B 2
 
 :ANNOUNCE
 rem Identify this script only if we're failing here.
-ECHO * DefaultRun.bat 0.00 SHOW DEFAULT VC COMPILATION #DEFINE VARIABLES
+ECHO * DefaultRun.bat 0.01 SHOW DEFAULT VC COMPILATION #DEFINE VARIABLES
 ECHO:
 EXIT /B 0
 rem Exit /B code required to prevent global exit.
@@ -69,6 +69,8 @@ rem limitations under the License.
 
 rem -----1---------2---------3---------4---------5---------6---------7-------*
 
+rem 0.01 2014-12-27-08:49 Correct %-dp0 to %~dp0
+rem      Correct syntax error in the DefaultBuild.run check
 rem 0.00 2014-12-26-11:04 Initial Run Script
 rem      The script is forked from VS2013\Default\DefaultRun.bat 0.03 and
 rem      customized for employment as VC\Default\DefaultRun.bat.
