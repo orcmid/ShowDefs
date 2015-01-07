@@ -1,5 +1,5 @@
 @echo off
-rem DefaultBuild.bat 0.00             UTF-8                    dh:2014-12-26
+rem DefaultBuild.bat 0.02             UTF-8                    dh:2014-12-27
 rem The identifying ECHO is produced using the :ANNOUNCE procedure, below.
 
 rem **** DO NOT MODIFY THIS SCRIPT IN THE SHOWDEF VC\ CODE TREE
@@ -9,11 +9,12 @@ rem ****    VC\Default\DefaultProject.zip is a local-only, modifiable working
 rem ****    copy that this script executes when it is present where expected.
 
 rem REQUIRE SCRIPT STORED IN THE SAME DIRECTORY (%~dp0) AS VC\DEFAULT\ CODE
-IF NOT EXIST "%~dp0DefaultBuild.bat" GOTO :FAIL1
-IF NOT EXIST "%~dp0Default.txt" GOTO :FAIL1
-IF NOT EXIST "%~dp0DefaultProject.zip" GOTO :FAIL1
-IF NOT EXIST "%~dp0DefaultProject.txt" GOTO :FAIL1
 IF NOT EXIST "%~dp0.gitignore" GOTO :FAIL1
+IF NOT EXIST "%~dp0Default.txt" GOTO :FAIL1
+IF NOT EXIST "%~dp0DefaultBuild.bat" GOTO :FAIL1
+IF NOT EXIST "%~dp0DefaultProject.txt" GOTO :FAIL1
+IF NOT EXIST "%~dp0DefaultProject.zip" GOTO :FAIL1
+IF NOT EXIST "%~dp0DefaultRun.bat" GOTO :FAIL1
 rem     Confirm as well as possible we're in a Default\ folder.
 
 rem REQUIRE DEFAULTPROJECT.ZIP EXTRACTED TO SUBFOLDER
@@ -39,18 +40,18 @@ EXIT /B 2
 
 :FAIL2
 CALL :ANNOUNCE
-ECHO * DefaultProject\DefaultBuild.bat COMMAND-LINE BUILD SCRIPT NOT FOUND
+ECHO * DEFAULTPROJECT\DEFAULTBUILD.BAT COMMAND-LINE BUILD SCRIPT NOT FOUND
 ECHO *     The DefaultProject\ folder and needed files are not found.
 ECHO *     It is necessary to extract the DefaultProject.zip archive into
-ECHO *     the VC\ subfolder so its version of DefaultBuild.bat or a
-ECHO *     customization is present for producing a compilation using
+ECHO *     VC\DefaultProject\ so its version of DefaultBuild.bat or a
+ECHO *     customization is available for producing a compilation using
 ECHO *     the correct environment and options.
 ECHO:
 EXIT /B 2
 
 :ANNOUNCE
 rem Identify this script only if we're failing here.
-ECHO * DefaultBuild.bat 0.00 DEFAULT VC++ COMMAND-LINE COMPILATION
+ECHO * DefaultBuild.bat 0.02 DEFAULT VC++ COMMAND-LINE COMPILATION
 ECHO:
 EXIT /B 0
 rem Exit /B code required to prevent global exit.
@@ -73,6 +74,9 @@ rem limitations under the License.
 
 rem -----1---------2---------3---------4---------5---------6---------7-------*
 
+rem 0.02 2014-12-27-16:35 Improve :FAIL2 Message
+rem 0.01 2014-12-27-16:25 Tighten Filter
+rem      The file requirement is expanded (and listed in filename order).
 rem 0.00 2014-12-26-11:00 Create Build Script
 rem      This script verifies that VC\Default\DefaultProject\DefaultBuild.bat
 rem      files are in place and defers to that script for the actual build
