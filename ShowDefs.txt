@@ -1,4 +1,4 @@
-ShowDefs.txt 1.28                     UTF-8                     dh:2014-12-27
+ShowDefs.txt 1.0.29                     UTF-8                       2016-12-04
 
                <https://github.com/orcmid/ShowDefs>/ShowDefs.txt
 
@@ -80,38 +80,53 @@ MANIFEST
 
 TODO
 
- * Add VC\ for the command-line adaptation, using batch files to allow
-   the VC++ tools to be used from within POSIX shells.  This should
-   all run and build from under the MSYS2 shell as well as cmd.exe, Power-
-   shell, TakeComand, etc.
+ * Refactor to use a WinCon Construction Set and not develop anything here
+   that is covered via shared implementation materials.
 
- * Add a testing.txt or maybe a testing folder?  The folder allows for
-   multiple testing cases housed in one place.  This is different than
-   tests on builds.  It is about the scripts and such here.
+ * Decide where to refactor the testing/ folder, and how to tie into nfoWare.
 
- * Add a docs\ folder to provide a consolidation point for repetitive
-   information, also providing more about using this repository and
-   adapting the techniques it demonstrates.
+ * Decide where to refactor the docs/ folder, and how to tie into nfoWare.
 
- * Emphasize that ShowDefs and the illustrative procedures that it gives us
-   examples for is all about building for Windows on Windows, relying on
-   Microsoft tools for that purpose, starting with cmd.exe and then the
-   developer tools.
+ * Identify ShowDefs as illustrating the nfoTools approach to building
+   Windows command-line tools on Windows.  
 
- * Add WinGCC for the command-line adaptation using the version of GCC that
-   installs with MSYS2 Dev Tools as a way to compile for Native Windows using
-   GCC command-line usage.
+ * Consider adding WinGCC for the command-line adaptation using the version of
+   GCC that installs with MSYS2 Dev Tools as a way to compile for Native Windows
+   using GCC from the command line?
 
  * Add Clang for the command-line adaption as well and for how it will be
-   usable from within Visual Studio 2015.
+   usable from within the Visual Studio shim.
 
  * Do something better with the README.md beyond the default that was created
    when the repository was initialized by GitHub.
 
- * Include NOTICE if and when needed.
+ * Include a versioned NOTICE in the usual way.
+ 
+ * There are many ways that a different ShowDefs might be required, because
+   of the different situations that arise as, e.g., when compiling a Win32
+   application using an SDK, windows.h, and many other things.  
+   
+ * Feature forensic use and not just a clever preprocess usage.
+ 
+ * This is a metalevel situation.  There are the preprocessor definitions
+   that any program can include for the purpose of showing definitions that
+   applied in its compile.  There is a demonstration program that can be
+   customized and built for a particular platform and compiler.  One might
+   customize that program.  Or one might amend the ShowDefs.h header to
+   work in a way desired in a given situation.  
+   
+ * Consider application where a source code determines that it has not been
+   produced with correct definitions for certain arrangements, such as 
+   compatibility with a particular library or interface methodology, etc.
+   
+ * ShowDefs has worthwhile application both as and in forensic tools within
+   the nfoTools project.  Keep that in mind. 
 
  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+ 1.0.29 2016-12-04-18:14 Switch to semantic versioning and propose refactoring
+        into use of an nfoTools supported construction kit.  The refactoring
+        will be worked out here.  
  1.28 2014-12-27-07:43 Add VC\, testing\, and docs\
       The text and work items are cleaned up and three additional sub-
       directories accounted for.
