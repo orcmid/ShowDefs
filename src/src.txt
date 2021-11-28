@@ -1,6 +1,7 @@
-src.txt 1.25                          UTF-8                    dh:2014-12-10
+src.txt 1.0.26                      UTF-8                     dh:2021-11-28
+----|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
-                 <https://github.com/orcmid/ShowDefs>/src/src.txt
+           <https://github.com/orcmid/ShowDefs/blob/master/src/src.txt>
 
                         SHOWDEFS COMMON SOURCE CODE
                         ===========================
@@ -20,7 +21,7 @@ MANIFEST
 
  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-                       Copyright 2014 Dennis E. Hamilton
+                Copyright 2014, 2021 Dennis E. Hamilton
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -57,17 +58,10 @@ TODO
  * Find the example that was my original inspiration for this use of the
    pre-processor back in 2005, if not before.
 
- * Along with preference for static library binding, see if there is a way
-   to use something simpler than printf() for the output, even if that does
-   not shrink the .EXE.
-
- * In VS2015 Preview, using printf in VCshowDefs.c creates a ton of warnings,
-   and using /MT seems to generate a ton more in the linker.  For the compiler
-   warnings, so fputs(..., stdout); is a preferable generate statement. This
-   may take several fputs operatins to get everything working properly.
 
  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+ 1.0.26 2021-11-28T19:59Z Switch to semver, clean up TODOs, add MAIKO vars
  1.25 2014-12-10-17:49 Switch from printf(s) to fputs(s, stdout)
       Make an fputs branch, work it out, and merge back if successful.
  1.24 2014-12-10-16:01 Tasks and Cleanup

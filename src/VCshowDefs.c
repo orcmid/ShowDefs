@@ -1,4 +1,5 @@
-/* VCshowDefs.c 1.23                  UTF-8                       2014-12-10
+/* VCshowDefs.c 1.0.24              UTF-8                         2021-11-28
+ * -|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
  *
  *             SHOW PRESENCE OF VISUAL C++ PREPROCESSOR DEFINES
  *
@@ -10,7 +11,7 @@
  *      a list of selected pre-processor variables with either their
  *      value, the notation "is defined" or the notation "undefined".
  *
- *   Copyright 2005,2014 Dennis E. Hamilton
+ *   Copyright 2005, 2014, 2021 Dennis E. Hamilton
  *
  *   Licensed under the Apache License, Version 2.0 (the "License");
  *   you may not use this file except in compliance with the License.
@@ -24,7 +25,6 @@
  *   See the License for the specific language governing permissions and
  *   limitations under the License.
  */
-
 
 #include <stdio.h>
       /* for stdout, fputs() and fputc() */
@@ -71,9 +71,9 @@ int main(void)
 
        char *tv;  /* pointer to the token value string */
 
-       fputs(  "VCshowDefs> 1.23 Check for documented pre-processor macros", 
+       fputs(  "VCshowDefs> 1.0.24 Check for documented pre-processor macros",
               stdout);
-       fputs("\n            that might be predefined in this compile.\n", 
+       fputs("\n            that might be predefined in this compile.\n",
               stdout);
 
 
@@ -83,12 +83,18 @@ int main(void)
        SHOW(__FILE__, "                ");
        SHOW(__LINE__, "                ");
        SHOW(__STDC__, "                ");
+       SHOW(__STDC_HOSTED__, "         ");
+       SHOW(__STDC_IEC_559__, "        ");
+       SHOW(__STDC_IEC_599_COMPLEX__, "");
+       SHOW(__STDC_ISO_10646__, "      ");
+       SHOW(__STDC_VERSION__, "        ");
        SHOW(__TIME__, "                ");
 
        fputs("\n  Supported (VC++?) reflection support:\n", stdout);
 
        SHOW(__COUNTER__, "             ");
        SHOW(__cplusplus, "             ");
+       SHOW(__FSTREXP, "               ");
        SHOW(__FUNCTION__, "            ");
        SHOW(__FUNCDNAME__, "           ");
        SHOW(__FUNCSIG__, "             ");
@@ -104,6 +110,7 @@ int main(void)
        SHOW(_DEBUG, "                  ");
        SHOW(_DLL, "                    ");
        SHOW(_M_ALPHA, "                ");
+       SHOW(_M_AMD64, "                ");
        SHOW(_M_IA64, "                 ");
        SHOW(_M_IX86, "                 ");
        SHOW(_M_MPPC, "                 ");
@@ -120,7 +127,7 @@ int main(void)
        SHOW(_WIN32, "                  ");
        SHOW(_WIN64, "                  ");
 
-       fputs("\n  And some favorites when compiling Windows code:\n", 
+       fputs("\n  And some favorites when compiling Windows code:\n",
              stdout);
 
        SHOW(_INC_WINDOWS, "            ");
@@ -130,8 +137,27 @@ int main(void)
        SHOW(_WIN32NLS, "               ");
        SHOW(_WINDEF_, "                ");
        SHOW(_WINDOWS_, "               ");
+       SHOW(__WINDOWS__, "             ");
        SHOW(WINVER, "                  ");
+       SHOW(_X64_, "                   ");
        SHOW(_X86_, "                   ");
+
+       fputs("\n  Some settings that matter to Interlisp MAIKO:\n",
+             stdout);
+
+       SHOW(MAIKO_PLATFORM_H, "        ");
+       SHOW(DOS, "                     ");
+       SHOW(__x86_64__, "              ");
+       SHOW(__x86_64, "                ");
+
+       SHOW(MAIKO_OS_WINDOWS, "        ");
+       SHOW(MAIKO_OS_NAME, "           ");
+       SHOW(MAIKO_OS_DETECTED, "       ");
+
+       SHOW(MAIKO_ARCH_X86_64, "       ");
+       SHOW(MAIKO_ARCH_NAME, "         ");
+       SHOW(MAIKO_ARCH_WORD_BITS, "    ");
+       SHOW(MAIKO_ARCH_DETECTED, "     ");
 
 
        /* This list can be extended to check known predefines of
@@ -147,7 +173,8 @@ int main(void)
 
 
 
-/*    1.23 2014-12-10-17:54 Switch from printf(s) to fputs(s, stdout)
+/*  1.0.24 2021-11-29T21:05Z Update for MAIKO settings, touching up
+ *    1.23 2014-12-10-17:54 Switch from printf(s) to fputs(s, stdout)
  *         The SHOW macro and all direct output is changed to fputs()
  *         and fputc() using stdout, just for simplicity of operation.
  *    1.22 2014-12-10-16:03 Use int main(void)
